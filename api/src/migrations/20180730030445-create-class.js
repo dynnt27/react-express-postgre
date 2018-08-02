@@ -2,14 +2,11 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Classes', {
-      id: {
+      classId: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },
-      classId: {
-        type: Sequelize.INT
       },
       createdAt: {
         type: Sequelize.DATE
@@ -21,7 +18,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       slots: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER,
       },
       description: {
         type: Sequelize.STRING
